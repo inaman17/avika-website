@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💖</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('https://i.postimg.cc/LsVqp0Tm/temp-Image-S0589-N.avif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px #000;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #typewriter {
+      font-size: 1.4em;
+      max-width: 600px;
+      text-shadow: 1px 1px 5px #000;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #fff;
+      width: 0;
+      animation: typing 4s steps(40, end), blink 0.7s step-end infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .hearts {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hearts span {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    .hearts span::before,
+    .hearts span::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .hearts span::before { top: -10px; left: 0; }
+    .hearts span::after { top: 0; left: -10px; }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .surprise-button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: rgba(255, 105, 180, 0.8);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 10px #000;
+      transition: all 0.3s ease;
+    }
+
+    .surprise-button:hover {
+      background: #ff69b4;
+      transform: scale(1.1);
+    }
+
+    #surprise-box {
+      margin-top: 20px;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      font-size: 1.3em;
+      display: none;
+      animation: pop 0.8s ease forwards;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy birthday Dr.Avika🥼</h1>
+  <h2> </h2>
+  <div id="typewriter">le surprise</div>
+
+  <button class="surprise-button" onclick="showSurprise()">Click it buddhu 🎁</button>
+
+  <div id="surprise-box">
+   <br> Happy Birthday!
+6th June is such a special day because it brought someone as amazing as you into the world. You are one of the kindest, most cheerful, and caring people I know, and I feel so lucky to have you as my friend. Your smile, your support, and your energy make every moment brighter.
+
+I hope this birthday is filled with joy, laughter, and all the love you truly deserve. You make our lives better just by being in them, and today, we celebrate you.
+
+Wishing you endless happiness and success ahead.
+
+With lots of love,<br>
+<br>~naman <br>
+  </div>
+
+  <div class="hearts">
+    <span style="left:10%; animation-delay: 0s;"></span>
+    <span style="left:20%; animation-delay: 1s;"></span>
+    <span style="left:30%; animation-delay: 2s;"></span>
+    <span style="left:40%; animation-delay: 1.5s;"></span>
+    <span style="left:50%; animation-delay: 0.5s;"></span>
+    <span style="left:60%; animation-delay: 2.5s;"></span>
+    <span style="left:70%; animation-delay: 1.2s;"></span>
+    <span style="left:80%; animation-delay: 0.7s;"></span>
+    <span style="left:90%; animation-delay: 1.8s;"></span>
+    <span style="left:95%; animation-delay: 0.9s;"></span>
+  </div>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="Diljit Dosanjh_ Tension (Official Music Video) Advisory-[AudioTrimmer.com].mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('surprise-box').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
